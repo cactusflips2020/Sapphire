@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 100%; height: 100%;">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sapphire
+  </title>
+  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link id="icon" rel="icon" type="image/x-icon" href="./img/logo.png" />
+  <%- include("partials/navbar") %>
+</head>
+<!--<script>
+  let visited = localStorage.getItem("visited");
+  if (visited === "" || visited === null || !visited) {
+    alert("Before using our website, please read our Terms of Service. (Located in our extra page!)");
+  }
+</script>-->
+<script>
+  const isLoggedIn = localStorage.getItem("loggedin");
+  if (!isLoggedIn) {
+    location.href = "/";
+  }
+</script>
+
+<body>
+  <div>
+    <center class="center" style="margin-top: 3%;"><br /><br /><br />
+      <div
+        style="display: flex; justify-content: center; background-color: rgb(17, 17, 27, 0.75); padding: 20px; width: 70%; border: 2px solid #11111b; border-radius: 12px;">
+        <div style="margin-left: auto;">
+          <script type="text/javascript">
+            atOptions = {
+              'key' : '3b0e26879afd5e3e7d6dd6d4d2565dff',
+              'format' : 'iframe',
+              'height' : 600,
+              'width' : 160,
+              'params' : {}
+            };
+          </script>
+          <script type="text/javascript" src="//www.topcreativeformat.com/3b0e26879afd5e3e7d6dd6d4d2565dff/invoke.js"></script>
+        </div>
+        <div class="content" style="width: 2000px">
+          <h1 style="font-size: 50px">sapphire.</h1>
+          <form style="width: 100%; display: flex; justify-content: center;" id="indexform">
+            <input type="text" id="searchbar" placeholder="Dive into the web..." />
+            <button id="searchbtn" style="margin-left: 5px;">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+          <br />
+          <div style="display: flex; justify-content: center; width: 100%;">
+          </div>
+          <p id="timePeriod"></p>
+        </div>
+        <div style="margin-right: auto;">
+          <script type="text/javascript">
+            atOptions = {
+              'key' : '3b0e26879afd5e3e7d6dd6d4d2565dff',
+              'format' : 'iframe',
+              'height' : 600,
+              'width' : 160,
+              'params' : {}
+            };
+          </script>
+          <script type="text/javascript" src="//www.topcreativeformat.com/3b0e26879afd5e3e7d6dd6d4d2565dff/invoke.js"></script>
+        </div>
+      </div>
+      <%- include("partials/footer") -%>
+    </center>
+  </div>
+  <style>
+    .joinbutton {
+      margin-top: 10px;
+      width: 150px;
+      padding: 2px;
+      border-radius: 15px;
+      background-color: #202020;
+      border: 2px solid #101010;
+      border-radius: 25px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      transition: 0.2s;
+    }
+
+    .joinbutton:hover {
+      background-color: rgb(15, 115, 255);
+      color: #fff;
+    }
+  </style>
+  <script src="./uv/uv.bundle.js"></script>
+  <script src="./uv/uv.config.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/mobile.js"></script>
+  <script>
+    let savedTitle = localStorage.getItem("tabName");
+    let savedBG = localStorage.getItem("BG");
+    let savedFavicon = localStorage.getItem("favicon");
+    let favicon = document.getElementById("icon");
+    if (savedTitle) {
+      document.title = savedTitle;
+    }
+    if (savedFavicon) {
+      favicon.href = savedFavicon;
+    }
+
+    if (savedBG) {
+      document.body.style.backgroundImage = `url("${savedBG}")`;
+      document.body.style.backgroundRepeat = "no-repeat"
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundAttachment = "fixed";
+      document.body.style.backgroundSize = "100% 100%";
+    }
+    if (localStorage.getItem("advCloak") == 1) {
+      if (window === window.top) {
+        let popup = window.open('about:blank', '_blank');
+        let doc = popup.document;
+        let aboutiframe = doc.createElement('iframe');
+        let faviconabout = doc.createElement('link');
+        doc.title = name;
+        faviconabout.rel = 'icon';
+        faviconabout.href = icon;
+        aboutiframe.src = location.href;
+        aboutiframe.style.position = 'fixed';
+        aboutiframe.style.top = 0;
+        aboutiframe.style.bottom = 0;
+        aboutiframe.style.left = 0;
+        aboutiframe.style.right = 0;
+        aboutiframe.style.border = 'none';
+        aboutiframe.style.width = "100%";
+        aboutiframe.style.height = '100%';
+        doc.head.appendChild(faviconabout);
+        doc.body.appendChild(aboutiframe);
+        location.replace('https://classroom.google.com/');
+      }
+    }
+
+    window.onbeforeunload = () => {
+      if (tabclosingval == "true") {
+        return "Do you want to leave the current tab?";
+      }
+    }
+
+    ////////////////
+  </script>
+</body>
+
+</html>

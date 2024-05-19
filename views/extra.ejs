@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sapphire | <%= title %>
+    </title>
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link id="icon" rel="icon" type="image/x-icon" href="./img/logo.png" />
+    <style>
+        .extra {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 5%;
+        }
+
+        .panel {
+            background-color: #1e1e2e;
+            width: auto;
+            padding: 20px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        button {
+            margin-bottom: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .project-cards {
+            background-color: rgb(30, 30, 30);
+            width: 25%;
+            padding: 20px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .card {
+            background-color: #1e1e2e;
+            width: 10em;
+            padding: 20px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 20px;
+            transition: 0.3s;
+            font-size: 90%;
+        }
+
+        .card:hover {
+            transform: scale(0.9);
+            background-color: rgb(37, 37, 37);
+            cursor: pointer;
+        }
+
+        .project-cards:hover {
+            transform: scale(0.9);
+            background-color: #252525;
+            cursor: pointer;
+        }
+
+        .card p {
+            font-size: 1em;
+        }
+    </style>
+</head>
+<script>
+    const isLoggedIn = localStorage.getItem("loggedin");
+    if (!isLoggedIn) {
+        location.replace("/");
+    }
+</script>
+
+<body>
+    <%- include("partials/navbar") %>
+        <center>
+            <div class="extra">
+                <div class="panel" style="width: 20%;">
+                    <h1>Credits</h1>
+                    <p><strong>@phoenix</strong> - Site Developer</p>
+                </div>
+                <div class="panel" style="width: 20%;">
+                    <h1>Resources</h1>
+                    <p>Useful pages and helpful content.</p><br />
+                    <button onclick="window.open('https://discord.gg/eWZbNsgGa5', '_blank')">
+                        Want more links?
+                    </button><br/>
+                </div>
+            </div>
+        </center>
+        <%- include("partials/footer") %>
+            <script>
+                let savedTitle = localStorage.getItem("tabName");
+                let savedBG = localStorage.getItem("BG");
+                let savedFavicon = localStorage.getItem("favicon");
+                let favicon = document.getElementById("icon");
+                if (savedTitle) {
+                    document.title = savedTitle;
+                }
+                if (savedFavicon) {
+                    favicon.href = savedFavicon;
+                }
+
+                if (savedBG) {
+                    document.body.style.backgroundImage = `url("${savedBG}")`;
+                    document.body.style.backgroundRepeat = "no-repeat"
+                    document.body.style.backgroundSize = "cover";
+                    document.body.style.backgroundAttachment = "fixed";
+                    document.body.style.backgroundSize = "100% 100%";
+                }
+                if (localStorage.getItem("advCloak") == 1) {
+                    if (window === window.top) {
+                        let popup = window.open('about:blank', '_blank');
+                        let doc = popup.document;
+                        let aboutiframe = doc.createElement('iframe');
+                        let faviconabout = doc.createElement('link');
+                        doc.title = name;
+                        faviconabout.rel = 'icon';
+                        faviconabout.href = icon;
+                        aboutiframe.src = location.href;
+                        aboutiframe.style.position = 'fixed';
+                        aboutiframe.style.top = 0;
+                        aboutiframe.style.bottom = 0;
+                        aboutiframe.style.left = 0;
+                        aboutiframe.style.right = 0;
+                        aboutiframe.style.border = 'none';
+                        aboutiframe.style.width = "100%";
+                        aboutiframe.style.height = '100%';
+                        doc.head.appendChild(faviconabout);
+                        doc.body.appendChild(aboutiframe);
+                        location.replace('https://classroom.google.com/');
+                    }
+                }
+
+                window.onbeforeunload = () => {
+                    if (tabclosingval == "true") {
+                        return "Do you want to leave the current tab?";
+                    }
+                }
+                
+            </script>
+</body>
+
+</html>
