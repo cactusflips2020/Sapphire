@@ -1,6 +1,6 @@
 <div align="center">
-<h1>Sapphire</h1>
 <img src="/public/img/logo.png" style="width: 250px;"/>
+<h1>Sapphire</h1>
 <br/>
 Sapphire is a web proxy built on Ultraviolet that has lightning fast speeds so you can browse the web without delay.
   <br/>
