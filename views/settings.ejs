@@ -133,13 +133,6 @@
         }
     </style>
 </head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ5T2ZY0DZ"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-MZ5T2ZY0DZ');
-</script>
 
 <body>
     <%- include("partials/navbar") %>
@@ -175,12 +168,6 @@
                     </div>
                 </center>
             </div>
-            <script>
-                const isLoggedIn = localStorage.getItem("loggedin");
-                if (!isLoggedIn) {
-                    location.replace("/");
-                }
-            </script>
             <div class="card">
                 <center>
                     <h1 style="font-size: 30px;">Panic key system</h1>
@@ -339,17 +326,6 @@
                     <div>
                         <button onclick="openAboutBlack()" style="padding: 15px; font-size: 15px;" class="tabbtn">Click
                             here to activate!</button>
-                    </div>
-                </center>
-            </div>
-            <div class="card">
-                <center>
-                    <h1 style="font-size: 30px;">Logout</h1>
-                    <p>Log out of Sapphire.</p>
-                    <br />
-                    <div>
-                        <button onclick="localStorage.removeItem('loggedin'); location.reload();"
-                            style="padding: 15px; font-size: 15px;" id="logout">Log out</button>
                     </div>
                 </center>
             </div>

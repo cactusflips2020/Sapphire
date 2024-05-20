@@ -11,19 +11,6 @@
   <link id="icon" rel="icon" type="image/x-icon" href="./img/logo.png" />
 </head>
 <%- include("partials/navbar") %>
-  <script>
-    const isLoggedIn = localStorage.getItem("loggedin");
-    if (!isLoggedIn) {
-      location.href = "/";
-    }
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ5T2ZY0DZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-MZ5T2ZY0DZ');
-  </script>
 
   <body>
     <center style="margin-top: 15%;">

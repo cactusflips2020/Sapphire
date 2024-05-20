@@ -129,7 +129,7 @@ function changeBG() {
   if (url === "") {
     alert("You need to put a valid url! Changing background to default...");
     document.body.style.backgroundImage = "none";
-    document.body.style.backgroundColor = "#1c1c1c";
+    document.body.style.backgroundColor = "#11111b";
     localStorage.setItem("BG", document.body.style.backgroundColor);
   } else {
     localStorage.setItem("BG", url);
@@ -166,7 +166,7 @@ function changeFaviconToGoogleDocs() {
   localStorage.setItem("favicon", "./img/google_docs.ico");
 }
 function changeFaviconToNormal() {
-  document.title = "Kitty Cat Club | Settings";
+  document.title = "Sapphire | Settings";
   localStorage.setItem("tabName", "");
   favicon.href = "./img/logo.png";
   localStorage.setItem("favicon", "./img/logo.png");
