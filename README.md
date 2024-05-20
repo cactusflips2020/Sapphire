@@ -16,9 +16,11 @@ Sapphire is a web proxy built on Ultraviolet that has lightning fast speeds so y
 <h1>Deployment</h1>
 <h2>Deploy with Koyeb</h2>
 1. Make a <a href="https://www.koyeb.com/">Koyeb</a> account
+<br>
 2. Visit <a href="https://app.koyeb.com/apps/deploy?type=git&repository=github.com/cactusflips2020/Sapphire">this link</a>
+<br>
 3. Change the port from 8000 to 3000 and the region to whatever is closest to you
+<br>
 4. Click deploy
 <br>
 Once done with steps wait for it to deploy and then click the link provided
-
