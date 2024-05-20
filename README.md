@@ -8,17 +8,10 @@ Sapphire is a lightning fast web-proxy built on Ultraviolet for browsing the web
 </div>
 <h1>Features</h1>
 <ul>
-<<<<<<< HEAD
 <li>Sleek and clean UI</li>
 <li>about:blank cloaking</li>
 <li>Lightning fast proxy speeds</li>
 <li>No ads</li>
-=======
-<li>Lightning fast proxy speeds.</li>
-<li>Games and apps.</li>
-<li>Customizable settings.</li>
-<li>No ads.</li>
->>>>>>> 5d6e623efffb1d6b0db804a0507528b212674bb6
 </ul>
 <h1>Deployment</h1>
 <h2>Deploy with Koyeb</h2>
