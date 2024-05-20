@@ -37,6 +37,9 @@ body {
     width: 100%;
 }
 
+input:hover::placeholder {
+    color: #11111b
+}
 
 #ksText {
     font-size: 30px;

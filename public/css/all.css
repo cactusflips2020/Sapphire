@@ -46,17 +46,11 @@ input {
 
 input:hover {
     background-color: #89B4F9;
+    color: #11111b;
 }
 
 input:focus {
     background-color: #89B4F9;
-}
-
-input:hover::placeholder {
-    color: #11111b;
-}
-
-input:focus::placeholder {
     color: #11111b;
 }
 
