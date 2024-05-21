@@ -188,61 +188,6 @@
             </div>
             <div class="card">
                 <center>
-                    <h1 style="font-size: 30px;">Change Credentials</h1>
-                    <p>Changes your username and password.</p>
-                    <div>
-                        <input placeholder="New username..." type="text" id="username"
-                            style="width: 15em; margin-left: 5px;  margin-right: 5px;" />
-                        <input placeholder="New password..." type="password" id="password"
-                            style="width: 15em; margin-left: 5px;  margin-right: 5px;" /><br />
-                        <script>
-                            let userInput = document.getElementById("username");
-                            let passInput = document.getElementById("password");
-                            let saveduser = localStorage.getItem("savedUser");
-                            let savedpass = localStorage.getItem("savedPass");
-                            function saveUser() {
-                                if (!userInput.value) {
-                                    notify("Username error", "You can't set a blank username!");
-                                } else {
-                                    localStorage.setItem("savedUser", userInput.value);
-                                    notify("Username saved", "Username has been saved!");
-                                }
-                            }
-                            function savePass() {
-                                if (!passInput.value) {
-                                    notify("Password error", "You can't set a blank password!");
-                                } else if (!(passInput.value.length >= 10)) {
-                                    notify("Password error", `Your new password must be at least 10 characters.`);
-                                } else {
-                                    localStorage.setItem("savedPass", passInput.value);
-                                    notify("Password saved", `Password has been saved! <br/> (New password: ${localStorage.getItem("savedPass")})`);
-                                }
-                            }
-                            function savedBoth() {
-                                if (!userInput.value && !passInput.value) {
-                                    notify("Credentials Error", "Both inputs have a blank value!");
-                                } else if (!userInput.value || !passInput.value) {
-                                    notify("Credentials Error", "One of the inputs have a blank value!");
-                                }
-                                else {
-                                    localStorage.setItem("savedUser", userInput.value);
-                                    localStorage.setItem("savedPass", passInput.value);
-                                    notify("Credentials saved", `Both Credentials have been saved! <br/> (New password: ${localStorage.getItem("savedPass")})`);
-                                }
-                            }
-                        </script>
-                        <button onclick="saveUser()" style="margin-top: 5px; margin-right: 5em;">
-                            Save Username
-                        </button>
-                        <button onclick="savePass()" style="margin-top: 5px;">
-                            Save Password
-                        </button>
-                        <br /><br />
-                    </div>
-                </center>
-            </div>
-            <div class="card">
-                <center>
                     <h1 style="font-size: 30px;">Search engine</h1>
                     <p>Switches the proxy search engine. (Default is Google)</p>
                     <div class="text-center" style="display: flexbox;">
