@@ -39,7 +39,7 @@ function settabandfavicon() {
   let newTabName = input.value;
 
   if (newTabName === "") {
-    document.title = "Kitty Cat Club | Settings";
+    document.title = "Sapphire | Settings";
     localStorage.setItem("tabName", "");
   } else {
     document.title = newTabName;
